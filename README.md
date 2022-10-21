@@ -1,4 +1,4 @@
-### cloud-gr1-kubernetes
+### ĐỀ TÀI NHÓM 1
 Tìm hiểu Kubernetes và xây dựng ứng dụng web hỗ trợ deploy application
 
 - Lê Duy Khiêm: 20110661
