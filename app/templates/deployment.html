@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triển khai app</title>
+    <link rel="stylesheet" href="{{url_for('static',filename = 'index.css')}}">
+    <script src="{{url_for('static',filename = 'index.js')}}"></script>
+</head>
+<body class="bg_deploy">
+  <h1 class="txt_title">Triển khai ứng dụng trên minikube</h1>
+    <h3>Sử dụng trình quản lý gói helm để deploy ứng dụng</h3>
+
+    <div class="container">
+        <br>
+        <form action="/show_all_deploy" method="POST">
+            <input type="submit" name="submit_button" value="Show all applications" class="btn_action"></input>
+            <input type="submit" name="submit_button" value="Delete all applications" class="btn_action" id ="btn_del"></input>
+        </form>
+    </div>
+    <div class="wrapper">
+        <!--Make sure the form has the autocomplete function switched off:-->
+        <form class="search" autocomplete="off" action="/deploy_option" method="post">
+            <div class="autocomplete" >
+            <input id="myInput" type="text" name="application" placeholder=" Search applications..." >
+            </div>
+            <button>Deploy</button> 
+        </form>
+    </div>
+    <script>
+        autocomplete(app);
+    </script>
+</body>
+</html>
